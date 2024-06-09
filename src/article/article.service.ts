@@ -16,7 +16,7 @@ export class ArticleService {
   }
 
   findDrafts() {
-    throw this.prisma.article.findMany({ where: { published: false } });
+    return this.prisma.article.findMany({ where: { published: false } });
   }
 
   findOne(id: number) {
